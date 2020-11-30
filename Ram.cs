@@ -15,11 +15,11 @@ namespace gary_garage
         }
         public override void Turn(string direction)
         {
-            Console.WriteLine("");
+            Console.WriteLine($"The Ram makes a sudden and un-signalled {direction} turn.");
         }
         public override void Stop()
         {
-            Console.WriteLine("");
+            Console.WriteLine("Without consideration for parking space lines, the Ram arrests its momentum.");
         }
     }
 }

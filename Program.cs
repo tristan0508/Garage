@@ -27,18 +27,26 @@ namespace gary_garage
             myCessna.Drive();
             myCessna.Turn("right");
             myCessna.Stop();
+            Console.WriteLine("");
+
 
             myTesla.Drive();
             myTesla.Turn("left");
             myTesla.Stop();
+            Console.WriteLine("");
+
 
             myRam.Drive();
             myRam.Turn("right");
             myRam.Stop();
+            Console.WriteLine("");
+
 
             myZero.Drive();
             myZero.Turn("left");
             myZero.Stop();
+            Console.WriteLine("");
+
 
 
 

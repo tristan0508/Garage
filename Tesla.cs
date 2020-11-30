@@ -13,13 +13,7 @@ namespace gary_garage
         {
             Console.WriteLine($"The {MainColor} Tesla just whispers on by.");
         }
-        public override void Turn(string direction)
-        {
-            Console.WriteLine("");
-        }
-        public override void Stop()
-        {
-            Console.WriteLine("");
-        }
+
+
     }
 }
