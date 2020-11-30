@@ -7,32 +7,41 @@ namespace gary_garage
         static void Main(string[] args)
         {
             // instantiate each vehicle
-            Zero myZero = new Zero();
-            Cessna myCessna = new Cessna();
-            Tesla myTesla = new Tesla();
-            Ram myRam = new Ram();
+            Zero myZero = new Zero()
+            {
+                MainColor = "smoke"
+            };
+            Cessna myCessna = new Cessna()
+            {
+                MainColor = "silver"
+            };
+            Tesla myTesla = new Tesla()
+            {
+                MainColor = "black"
+            };
+            Ram myRam = new Ram()
+            {
+                MainColor = "red"
+            };
 
-
-            myCessna.MainColor = "silver";
-            Console.Write($"The {myCessna.MainColor} Cessna screams, ");
             myCessna.Drive();
-            Console.WriteLine("");
+            myCessna.Turn("right");
+            myCessna.Stop();
 
-            myTesla.MainColor = "black";
-            Console.Write($"The {myTesla.MainColor} Tesla just ");
             myTesla.Drive();
-            Console.WriteLine(" on by.");
-            Console.WriteLine("");
+            myTesla.Turn("left");
+            myTesla.Stop();
 
-            myRam.MainColor = "red";
-            Console.Write($"The {myRam.MainColor} Ram speeds on the interstate with an exagerated, ");
             myRam.Drive();
-            Console.WriteLine("");
+            myRam.Turn("right");
+            myRam.Stop();
 
-            myZero.MainColor = "smoke";
-            Console.Write($"The {myZero.MainColor} Zero zips by with a subdued, ");
             myZero.Drive();
-            Console.WriteLine("");
+            myZero.Turn("left");
+            myZero.Stop();
+
+
+
 
         }
     }

@@ -12,6 +12,14 @@ namespace gary_garage
         }
         public override void Drive()
         {
+            Console.WriteLine($"The {MainColor} Cessna screams, \"shoooooo!\"");
+        }
+        public override void Turn(string direction)
+        {
+            Console.WriteLine("\"shoooooo!\"");
+        }
+        public override void Stop()
+        {
             Console.WriteLine("\"shoooooo!\"");
         }
     }

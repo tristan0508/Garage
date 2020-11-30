@@ -12,7 +12,16 @@ namespace gary_garage
         }
         public override void Drive()
         {
-            Console.WriteLine("\"wizzzzzzzz...\"");
+            Console.WriteLine($"The {MainColor} Zero zips by with a subdued, \"wizzzzzzzz...\"");
         }
+
+        // public override void Turn(string direction)
+        // {
+        //     Console.WriteLine("");
+        // }
+        // public override void Stop()
+        // {
+        //     Console.WriteLine("");
+        // }
     }
 }

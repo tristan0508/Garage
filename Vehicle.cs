@@ -9,7 +9,15 @@ namespace gary_garage
 
         public virtual void Drive()
         {
-            Console.WriteLine("Vrooom!");
+            Console.WriteLine("This vehicle goes, \"Vrooom!\"");
+        }
+        public virtual void Turn(string direction)
+        {
+            Console.WriteLine($"Next the vehicle makes a {direction} turn.");
+        }
+        public virtual void Stop()
+        {
+            Console.WriteLine("Finally, the vehicle stops.");
         }
     }
 }

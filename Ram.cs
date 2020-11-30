@@ -11,7 +11,15 @@ namespace gary_garage
         }
         public override void Drive()
         {
-            Console.WriteLine("\"berrrrrrrrrr!\"");
+            Console.WriteLine($"The {MainColor} Ram speeds on the interstate with an exagerated, \"berrrrrrrrrr!\"");
+        }
+        public override void Turn(string direction)
+        {
+            Console.WriteLine("");
+        }
+        public override void Stop()
+        {
+            Console.WriteLine("");
         }
     }
 }
