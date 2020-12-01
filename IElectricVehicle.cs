@@ -5,7 +5,7 @@ namespace gary_garage
         double BatteryKWh { get; set; }
         void ChargeBattery()
         {
-            BatteryKWh = 100.00;
+           
         }
     }
 }

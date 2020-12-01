@@ -8,7 +8,7 @@ namespace gary_garage
 
         public void ChargeBattery()
         {
-            
+            BatteryKWh = 100;
         }
         public override void Drive()
         {
