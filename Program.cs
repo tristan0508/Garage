@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace gary_garage
 {
@@ -6,51 +7,38 @@ namespace gary_garage
     {
         static void Main(string[] args)
         {
-            // instantiate each vehicle
-            Zero myZero = new Zero()
-            {
-                MainColor = "smoke"
-            };
-            Cessna myCessna = new Cessna()
-            {
-                MainColor = "silver"
-            };
-            Tesla myTesla = new Tesla()
-            {
-                MainColor = "black"
-            };
-            Ram myRam = new Ram()
-            {
-                MainColor = "red"
+            Zero fxs = new Zero();
+            Zero fx = new Zero();
+            Tesla modelS = new Tesla();
+
+            List<IElectricVehicle> electricVehicles = new List<IElectricVehicle>() {
+                fx, fxs, modelS
             };
 
-            myCessna.Drive();
-            myCessna.Turn("right");
-            myCessna.Stop();
+            Console.WriteLine("Electric Vehicles");
+          
+            electricVehicles.ForEach(v => Console.WriteLine($"{v.BatteryKWh}"));
+          
+            electricVehicles.ForEach(v => v.ChargeBattery());
+         
+            electricVehicles.ForEach(v => Console.WriteLine($"{v.BatteryKWh}"));
+
+        
+
+            Ram ram = new Ram ();
+            Cessna cessna150 = new Cessna ();
+
+            List<IGasVehicle> gasVehicles = new List<IGasVehicle>() {
+                ram, cessna150
+            };
             Console.WriteLine("");
-
-
-            myTesla.Drive();
-            myTesla.Turn("left");
-            myTesla.Stop();
-            Console.WriteLine("");
-
-
-            myRam.Drive();
-            myRam.Turn("right");
-            myRam.Stop();
-            Console.WriteLine("");
-
-
-            myZero.Drive();
-            myZero.Turn("left");
-            myZero.Stop();
-            Console.WriteLine("");
-
-
-
-
-
+            Console.WriteLine("Gas Vehicles");
+           
+            gasVehicles.ForEach(v => Console.WriteLine(v.FuelCapacity));
+        
+            gasVehicles.ForEach(v => v.RefuelTank());
+            
+            gasVehicles.ForEach(v => Console.WriteLine(v.FuelCapacity));
         }
     }
 }

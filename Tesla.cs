@@ -2,12 +2,12 @@ using System;
 
 namespace gary_garage
 {
-    public class Tesla : Vehicle
+    public class Tesla : Vehicle, IElectricVehicle
     {
         public double BatteryKWh { get; set; }
         public void ChargeBattery()
         {
-            // method definition omitted
+            
         }
         public override void Drive()
         {
